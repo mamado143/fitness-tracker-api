@@ -129,13 +129,3 @@ This project was developed by Mohamed Dahir Mohamoud for educational purposes as
 
 
 
-***
-
-### Your Final Next Step
-Once you save that file, run these three commands to push this beautiful README to GitHub so you can officially hand it in:
-
-```bash
-git add README.md
-git commit -m "docs: update comprehensive project README for final submission"
-git push origin main
-````
