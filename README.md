@@ -233,7 +233,7 @@ Authorization: Bearer <access_token>
 |GET|`/api/activities/metrics/`|Get user fitness statistics|
 
 Example response:
-```
+```json
 {  
   "total_workouts": 12,  
   "total_duration": 540,  
@@ -248,7 +248,7 @@ Example response:
 **POST**
 
 /api/activities/
-```
+```json
 {  
   "activity_type": "weightlifting",  
   "duration_minutes": 60,  
