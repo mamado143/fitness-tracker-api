@@ -20,9 +20,14 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
+# This is the missing import right here!
+from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
+    # Web Browser Login (so you can demo in the browser)
+    path('api-auth/', include('rest_framework.urls')),
     
     # JWT Authentication Endpoints
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
@@ -33,4 +38,8 @@ urlpatterns = [
     
     # Our Fitness Tracking Endpoints
     path('api/', include('activities.urls')),
+
+    # Swagger API Documentation
+    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
 ]
