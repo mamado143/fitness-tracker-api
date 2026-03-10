@@ -233,12 +233,13 @@ Authorization: Bearer <access_token>
 |GET|`/api/activities/metrics/`|Get user fitness statistics|
 
 Example response:
-
+```
 {  
   "total_workouts": 12,  
   "total_duration": 540,  
   "total_calories": 3200  
 }
+```
 
 ---
 
@@ -247,7 +248,7 @@ Example response:
 **POST**
 
 /api/activities/
-
+```
 {  
   "activity_type": "weightlifting",  
   "duration_minutes": 60,  
@@ -268,7 +269,7 @@ Example response:
     }  
   ]  
 }
-
+```
 ---
 
 # 🧪 Running Tests
